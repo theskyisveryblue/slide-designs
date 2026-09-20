@@ -1,0 +1,30 @@
+{
+  "name": "slide-designs",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "typecheck": "tsc --noEmit",
+    "test": "node tests/run.mjs",
+    "test:proof": "node proof/verify.mjs",
+    "test:office": "node tests/office.mjs",
+    "audit": "npm audit --omit=dev",
+    "test:production": "npm run build && node tests/production.mjs"
+  },
+  "dependencies": {
+    "@slidejs/runner-revealjs": "0.1.8",
+    "jszip": "3.10.1",
+    "pptxgenjs": "4.0.1"
+  },
+  "devDependencies": {
+    "playwright": "^1.55.0",
+    "typescript": "^5.6.3",
+    "vite": "^7.3.1"
+  },
+  "overrides": {
+    "image-size": "2.0.4"
+  }
+}
